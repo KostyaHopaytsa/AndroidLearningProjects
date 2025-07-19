@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TermsProjectSettings">
+    <currentTermsLanguage>en</currentTermsLanguage>
+    <terms>
+      <map>
+        <entry key="en">
+          <value>
+            <map>
+              <entry key="133298184">
+                <value>
+                  <list>
+                    <Term value="callbacks" definition="A callback is a function or lambda that is passed to a method to be invoked later, often used in asynchronous code to handle operations after they complete." />
+                    <Term value="callback" definition="A callback is a function or lambda that is passed to a method to be invoked later, often used in asynchronous code to handle operations after they complete." />
+                    <Term value="Callbacks" definition="A callback is a function or lambda that is passed to a method to be invoked later, often used in asynchronous code to handle operations after they complete." />
+                    <Term value="SwingUtilities.invokeLater" definition="SwingUtilities.invokeLater ensures that a specific piece of code, such as updating the UI, runs on the main UI thread (AWT event dispatching thread) in Java Swing." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="710788844">
+                <value>
+                  <list>
+                    <Term value="coroutines" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="GitHub token" definition="A GitHub token is a personal access credential used to authenticate with the GitHub API, allowing users to securely access GitHub resources." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="720566005">
+                <value>
+                  <list>
+                    <Term value="suspending functions" definition="A suspending function in Kotlin is a function that can be paused and resumed at a later time without blocking the thread on which it is running." />
+                    <Term value="suspending function" definition="A suspending function in Kotlin is a function that can be paused and resumed at a later time without blocking the thread on which it is running." />
+                    <Term value="Suspending functions" definition="A suspending function in Kotlin is a function that can be paused and resumed at a later time without blocking the thread on which it is running." />
+                    <Term value="Suspend function" definition="A suspending function in Kotlin is a function that can be paused and resumed at a later time without blocking the thread on which it is running." />
+                    <Term value="suspend function" definition="A suspending function in Kotlin is a function that can be paused and resumed at a later time without blocking the thread on which it is running." />
+                    <Term value="Suspend function 'getOrgRepos'" definition="This suspend function 'getOrgRepos' performs a request to retrieve a list of repositories of an organization without blocking the underlying thread." />
+                    <Term value="loadContributorsSuspend()" definition="The loadContributorsSuspend() function is marked as suspend to utilize suspending functions like 'getOrgRepos()' and 'getRepoContributors()' for loading contributors while maintaining responsiveness." />
+                    <Term value="Response" definition="In Retrofit, a Response wraps the result of a network call and allows manual error checking by inspecting the result body and error state." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="773414455">
+                <value>
+                  <list>
+                    <Term value="coroutineScope" definition="In Kotlin, a CoroutineScope is used to manage the lifetime of coroutines. It allows starting coroutines in a specific scope, ensuring they all run within the same context." />
+                    <Term value="dispatcher" definition="A Dispatcher in Kotlin determines the thread or thread pool on which a coroutine runs. Common dispatchers include Dispatchers.Default, Dispatchers.IO, and Dispatchers.Main." />
+                    <Term value="Dispatchers" definition="A Dispatcher in Kotlin determines the thread or thread pool on which a coroutine runs. Common dispatchers include Dispatchers.Default, Dispatchers.IO, and Dispatchers.Main." />
+                    <Term value="structured concurrency" definition="Structured concurrency in Kotlin means that child coroutines are bound to the scope of their parent, inheriting its context and allowing better management of coroutine lifetimes." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="944974850">
+                <value>
+                  <list>
+                    <Term value="Retrofit" definition="Retrofit is a library that allows making HTTP requests to APIs and retrieving responses in an efficient way." />
+                    <Term value="*Call.execute()" definition="The execute() method in the Call class performs a synchronous call that blocks the underlying thread until the request completes." />
+                    <Term value="bodyList()" definition="The bodyList() function is an extension function that avoids repeating .body() ?: emptyList() in the code, simplifying error handling for HTTP responses." />
+                    <Term value="loadContributorsBlocking()" definition="The loadContributorsBlocking() function fetches a list of contributors for a specified organization using a blocking API call from the UI thread." />
+                    <Term value="updateResults()" definition="The updateResults() function is called to update the UI with the data fetched, and it must always be executed on the UI thread." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="986714977">
+                <value>
+                  <list>
+                    <Term value="coroutines" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="Coroutines" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="TestDispatcher" definition="A TestDispatcher is a special dispatcher used during testing with coroutines, enabling control over virtual time and immediate execution of coroutines." />
+                    <Term value="runTest" definition="In Kotlin Coroutine test framework, runTest is a function that allows running coroutine-based tests with virtual time." />
+                    <Term value="ExperimentalCoroutinesApi" definition="ExperimentalCoroutinesApi is an annotation in Kotlin that marks features of the Coroutine library as experimental and subject to change." />
+                    <Term value="currentTime" definition="The currentTime property in a TestScope provides the current virtual time during coroutine testing with a TestDispatcher." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1049805991">
+                <value>
+                  <list>
+                    <Term value="coroutine scope" definition="The coroutine scope is responsible for the structure and parent-child relationships between distinct coroutines. New coroutines usually need to be started within a scope." />
+                    <Term value="coroutine context" definition="The coroutine context stores additional technical information used to run a given coroutine, like the coroutine's custom name, or the dispatcher specifying the threads on which the coroutine should be scheduled." />
+                    <Term value="launch" definition="`launch` is a function declared as an extension to `CoroutineScope` that starts a new coroutine within the given scope." />
+                    <Term value="launched" definition="`launch` is a function declared as an extension to `CoroutineScope` that starts a new coroutine within the given scope." />
+                    <Term value="async" definition="`async` is a function declared as an extension to `CoroutineScope` that starts a new coroutine within the given scope and returns a deferred result." />
+                    <Term value="runBlocking" definition="`runBlocking` is a top-level function that starts a coroutine and blocks the current thread until its completion. It's primarily used in `main()` functions and tests as a bridge function." />
+                    <Term value="structured concurrency" definition="Structured concurrency is a mechanism behind the structure of coroutines that provides benefits such as automatic cancellation of child coroutines, waiting for their completion, and tethering their lifecycle to the parent scope." />
+                    <Term value="GlobalScope.async" definition="`GlobalScope.async` starts a new coroutine from the global scope, creating a top-level 'independent' coroutine whose lifespan is not bound to any smaller scope." />
+                    <Term value="GlobalScope.launch" definition="`GlobalScope.launch` starts a new coroutine from the global scope, creating a top-level 'independent' coroutine whose lifespan is not bound to any smaller scope." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1203161551">
+                <value>
+                  <list>
+                    <Term value="suspend" definition="In Kotlin, `suspend` is a keyword that marks a function as suspendable, allowing it to be paused and resumed at a later point without blocking the thread." />
+                    <Term value="GitHubService" definition="`GitHubService` typically represents an interface or class responsible for interacting with GitHub's API to fetch data such as repositories, contributors, etc." />
+                    <Term value="RequestData" definition="`RequestData` holds data required for making API requests, such as query parameters or endpoint details." />
+                    <Term value="Dispatchers.Default" definition="`Dispatchers.Default` is a coroutine dispatcher in Kotlin optimized for CPU-intensive tasks using shared background threads." />
+                    <Term value="Dispatchers.Main" definition="`Dispatchers.Main` is a coroutine dispatcher in Kotlin that operates on the main UI thread, usually used to update the UI." />
+                    <Term value="withContext" definition="In Kotlin Coroutines, `withContext` is a suspend function that transitions the coroutine context to a different dispatcher for a given block of code." />
+                    <Term value="launch" definition="`launch` is a coroutine builder in Kotlin used to launch a new coroutine without blocking the current thread." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1259221621">
+                <value>
+                  <list>
+                    <Term value="blocking requests" definition="Blocking requests are a way of implementing logic that waits for a process to complete before moving onto the next step." />
+                    <Term value="callbacks" definition="Callbacks are programming constructs used to execute code at a later point, typically when a specific event or condition occurs." />
+                    <Term value="Coroutines" definition="In Kotlin, Coroutines are a lightweight thread-like construct used for asynchronous programming, allowing tasks to be paused and resumed later." />
+                    <Term value="coroutines" definition="In Kotlin, Coroutines are a lightweight thread-like construct used for asynchronous programming, allowing tasks to be paused and resumed later." />
+                    <Term value="channels" definition="Channels in Kotlin are a communication mechanism that allows coroutines to share information or pass data between each other." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1679928559">
+                <value>
+                  <list>
+                    <Term value="coroutines" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="coroutine" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="Coroutines" definition="In Kotlin, a Coroutine is a lightweight thread-like program. It's similar to a Thread but has subtle differences. Kotlin uses suspend functions to form a Coroutine." />
+                    <Term value="coroutine builders" definition="Coroutine builders such as `launch`, `async`, or `runBlocking` are used to start new coroutines in Kotlin." />
+                    <Term value="launch" definition="A coroutine builder to start a computation that isn't expected to return a result. It returns a `Job` representing the coroutine." />
+                    <Term value="async" definition="A coroutine builder that starts a new coroutine and returns a `Deferred` object, allowing asynchronous retrieval of computation results." />
+                    <Term value="Deferred" definition="An object representing a computation that will provide a result in the future. It supports operations like `await()` to retrieve results." />
+                    <Term value="defers" definition="An object representing a computation that will provide a result in the future. It supports operations like `await()` to retrieve results." />
+                    <Term value="deferred" definition="An object representing a computation that will provide a result in the future. It supports operations like `await()` to retrieve results." />
+                    <Term value="Job" definition="A handle to the coroutine returned by `launch` representing its lifecycle. Provides functionality like cancelling or waiting for the coroutine to complete using `Job.join()`." />
+                    <Term value="await()" definition="A method on a `Deferred` instance used to suspend the calling coroutine until the deferred result is available." />
+                    <Term value="awaitAll()" definition="A method to wait for the results of all deferred objects in a list concurrently." />
+                    <Term value="runBlocking" definition="A coroutine builder that acts as a bridge between the blocking and non-blocking worlds, adapting top-level main coroutines for use in `main()` functions or tests." />
+                    <Term value="coroutineScope" definition="A coroutine builder that provides a scope for new coroutines. It ensures that all launched coroutines complete before the scope exits." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1724356049">
+                <value>
+                  <list>
+                    <Term value="callback" definition="A callback is a block of executable code or a method passed as an argument to other code, which is expected to call back at a certain time or event. In this context, it determines what happens after an HTTP request using Retrofit." />
+                    <Term value="callbacks" definition="A callback is a block of executable code or a method passed as an argument to other code, which is expected to call back at a certain time or event. In this context, it determines what happens after an HTTP request using Retrofit." />
+                    <Term value="CALLBACKS" definition="A callback is a block of executable code or a method passed as an argument to other code, which is expected to call back at a certain time or event. In this context, it determines what happens after an HTTP request using Retrofit." />
+                    <Term value="Retrofit callback API" definition="Retrofit callback API is a way to handle HTTP requests asynchronously in Android development. The `Call.enqueue()` function is used to initiate the request and specify a callback for handling the response." />
+                    <Term value="Call.enqueue()" definition="`Call.enqueue()` is a function in Retrofit used to start an HTTP request asynchronously and handle the response or failure through a callback." />
+                    <Term value="onResponse()" definition="`onResponse()` is an extension function that processes server responses in Retrofit and takes a lambda as an argument to specify the actions performed on a successful response." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1821911244">
+                <value>
+                  <list>
+                    <Term value="coroutine" definition="A coroutine is a lightweight thread that allows suspendable computations. It can be paused, removed from the thread, and resumed later when ready." />
+                    <Term value="Coroutines" definition="A coroutine is a lightweight thread that allows suspendable computations. It can be paused, removed from the thread, and resumed later when ready." />
+                    <Term value="coroutines" definition="A coroutine is a lightweight thread that allows suspendable computations. It can be paused, removed from the thread, and resumed later when ready." />
+                    <Term value="launch" definition="A library function in Kotlin used to start a new coroutine, taking a lambda as an argument to define the coroutine's task." />
+                    <Term value="suspending functions" definition="In Kotlin, a suspending function is a function that can suspend the execution of a coroutine without blocking the underlying thread." />
+                    <Term value="Suspending functions" definition="In Kotlin, a suspending function is a function that can suspend the execution of a coroutine without blocking the underlying thread." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1873386082">
+                <value>
+                  <list>
+                    <Term value="channels" definition="Channels are communication primitives that allow data to be passed between coroutines. One coroutine can send information to a channel, and another can receive that information from the same channel." />
+                    <Term value="Channels" definition="Channels are communication primitives that allow data to be passed between coroutines. One coroutine can send information to a channel, and another can receive that information from the same channel." />
+                    <Term value="channel" definition="Channels are communication primitives that allow data to be passed between coroutines. One coroutine can send information to a channel, and another can receive that information from the same channel." />
+                    <Term value="Channel" definition="Channels are communication primitives that allow data to be passed between coroutines. One coroutine can send information to a channel, and another can receive that information from the same channel." />
+                    <Term value="SendChannel" definition="SendChannel is a part of a Channel interface in Kotlin responsible for sending elements to the channel. It provides a 'send()' method declared as 'suspend'." />
+                    <Term value="ReceiveChannel" definition="ReceiveChannel is a part of a Channel interface in Kotlin responsible for receiving elements from the channel. It provides a 'receive()' method declared as 'suspend'." />
+                    <Term value="Unlimited channel" definition="An unlimited channel is a type of channel that can grow indefinitely. A send() call will never be suspended, but the program can throw an OutOfMemoryException if running out of memory." />
+                    <Term value="unlimited channel" definition="An unlimited channel is a type of channel that can grow indefinitely. A send() call will never be suspended, but the program can throw an OutOfMemoryException if running out of memory." />
+                    <Term value="Buffered channel" definition="A buffered channel is a channel with a constrained size. When the channel is full, send() calls are suspended until space is available." />
+                    <Term value="buffered channel" definition="A buffered channel is a channel with a constrained size. When the channel is full, send() calls are suspended until space is available." />
+                    <Term value="Rendezvous channel" definition="A Rendezvous channel is a channel without a buffer, where send() and receive() must meet in time to transfer information. One operation is always suspended until the corresponding operation is called." />
+                    <Term value="Conflated channel" definition="A conflated channel retains only the latest element sent to it. Previous elements are overwritten, and the send() call is never suspended." />
+                    <Term value="conflated channel" definition="A conflated channel retains only the latest element sent to it. Previous elements are overwritten, and the send() call is never suspended." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="1884965398">
+                <value>
+                  <list>
+                    <Term value="User.contributions" definition="A property in Kotlin that contains the total number of contributions made by a given user across all projects." />
+                    <Term value="List&lt;User&gt;.aggregate()" definition="A function in Kotlin that aggregates a list of users by summing up their contributions and sorting them in descending order by the total contributions." />
+                  </list>
+                </value>
+              </entry>
+              <entry key="2142181718">
+                <value>
+                  <list>
+                    <Term value="coroutineScope" definition="In Kotlin, coroutineScope is a block that creates a scope for new coroutines and ensures they complete before the parent coroutine completes." />
+                    <Term value="GlobalScope" definition="In Kotlin, GlobalScope is a CoroutineScope that allows coroutines to run globally, independent of any specific scope, which means their lifecycle is not bound to any calling code." />
+                    <Term value="GlobalScope.async" definition="In Kotlin, GlobalScope.async is used to launch an asynchronous coroutine in the global scope, returning a Deferred result, which can later be awaited." />
+                    <Term value="Job" definition="In Kotlin coroutines, a Job represents a cancellable unit of work or coroutine." />
+                    <Term value="job" definition="In Kotlin coroutines, a Job represents a cancellable unit of work or coroutine." />
+                    <Term value="setUpCancellation" definition="In Kotlin, setUpCancellation is a function used to configure the cancellation behavior of a coroutine, often adding a listener to trigger cancellation." />
+                    <Term value="structured concurrency" definition="In Kotlin, structured concurrency ensures that child coroutines are automatically canceled when their parent coroutine is canceled, creating a predictable cancellation mechanism." />
+                  </list>
+                </value>
+              </entry>
+            </map>
+          </value>
+        </entry>
+      </map>
+    </terms>
+    <termsVersions>
+      <map>
+        <entry key="en" value="51" />
+      </map>
+    </termsVersions>
+  </component>
+</project>

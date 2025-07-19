@@ -1,6 +1,18 @@
-# Android
+# ≤гноруЇмо службов≥ папки
 .gradle/
-build/
 .idea/
-*.iml
+build/
 local.properties
+
+# ≤гноруЇмо все, що пов'€зане з комп≥л€ц≥Їю
+**/build/
+*.iml
+
+#  еш≥ Android Studio
+.cxx/
+.externalNativeBuild/
+captures/
+
+# OS-specific
+.DS_Store
+Thumbs.db

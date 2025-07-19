@@ -1,0 +1,18 @@
+# Ігноруємо службові папки
+.gradle/
+.idea/
+build/
+local.properties
+
+# Ігноруємо все, що пов'язане з компіляцією
+**/build/
+*.iml
+
+# Кеші Android Studio
+.cxx/
+.externalNativeBuild/
+captures/
+
+# OS-specific
+.DS_Store
+Thumbs.db

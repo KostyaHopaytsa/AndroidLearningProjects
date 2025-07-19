@@ -1,14 +1,14 @@
-# ≤гноруЇмо службов≥ папки
+# Android
 .gradle/
 .idea/
 build/
 local.properties
 
-# ≤гноруЇмо все, що пов'€зане з комп≥л€ц≥Їю
+# compile ignore
 **/build/
 *.iml
 
-#  еш≥ Android Studio
+# cash Android Studio
 .cxx/
 .externalNativeBuild/
 captures/

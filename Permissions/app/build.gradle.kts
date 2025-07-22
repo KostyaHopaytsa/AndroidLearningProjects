@@ -57,5 +57,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation ("com.google.accompanist:accompanist-permissions:0.29.0-alpha")
+    implementation ("com.google.accompanist:accompanist-permissions:0.21.1-beta")
 }

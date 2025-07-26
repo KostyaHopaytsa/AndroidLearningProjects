@@ -28,9 +28,20 @@ class MainActivity : ComponentActivity() {
         }
 
         GlobalScope.launch {
-            delay(5000L)
-            Log.d(TAG, "Coroutine says hello from thread ${Thread.currentThread().name}")
+            val networkCallAnswer = doNetworCall()
+            val networkCallAnswer2 = doNetworCall2()
+            Log.d(TAG, networkCallAnswer)
+            Log.d(TAG, networkCallAnswer2)
         }
-        Log.d(TAG, "Hello from thread ${Thread.currentThread().name}")
+    }
+
+    suspend fun doNetworCall(): String {
+        delay(3000L)
+        return "This is answer"
+    }
+
+    suspend fun doNetworCall2(): String {
+        delay(3000L)
+        return "This is answer"
     }
 }

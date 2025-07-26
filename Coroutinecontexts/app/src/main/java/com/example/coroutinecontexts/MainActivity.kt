@@ -55,6 +55,31 @@ fun MainScreen() {
     //this condition and scope can be simplify and safer by LaunchedEffect
     if (!launched.value) {
         launched.value = true
+
+        /*Coroutine Dispatchers (Контексти виконання):
+
+        Dispatchers.Default
+        Для CPU-інтенсивних задач (сортування, парсинг, обчислення)
+        Працює на пулі потоків (4+)
+
+        Dispatchers.IO
+        Для I/O-операцій (мережа, база даних, файли)
+        Дуже легкий, підтримує багато паралельних потоків
+
+        Dispatchers.Main
+        Головний потік (UI)
+        Використовується в Android для оновлення інтерфейсу
+
+        Dispatchers.Unconfined
+        Починає в поточному потоці, але може змінити його при first suspension
+        Часто використовується для тестів або специфічних випадків
+
+        newSingleThreadContext("MyThread")
+        Створює абсолютно новий потік (витратно, краще уникати)
+
+        withContext(...) використовується для переключення контекстів:
+        withContext(Dispatchers.Main) { update UI }*/
+
         GlobalScope.launch(Dispatchers.IO) {
             Log.d(TAG, "Starting coroutine in thread ${Thread.currentThread().name}")
             val answer = doNetworkCall()

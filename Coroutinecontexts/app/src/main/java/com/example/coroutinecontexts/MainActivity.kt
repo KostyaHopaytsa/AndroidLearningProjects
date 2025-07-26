@@ -9,16 +9,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.withCreated
 import com.example.coroutinecontexts.ui.theme.CoroutineContextsTheme
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
@@ -55,7 +51,6 @@ fun MainScreen() {
     //this condition and scope can be simplify and safer by LaunchedEffect
     if (!launched.value) {
         launched.value = true
-
         /*Coroutine Dispatchers (Контексти виконання):
 
         Dispatchers.Default
@@ -79,7 +74,6 @@ fun MainScreen() {
 
         withContext(...) використовується для переключення контекстів:
         withContext(Dispatchers.Main) { update UI }*/
-
         GlobalScope.launch(Dispatchers.IO) {
             Log.d(TAG, "Starting coroutine in thread ${Thread.currentThread().name}")
             val answer = doNetworkCall()

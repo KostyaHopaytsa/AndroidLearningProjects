@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "369003081062",
+    "project_id": "fir-learning-db8e4",
+    "storage_bucket": "fir-learning-db8e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369003081062:android:c590d05a3c38451ff1aca7",
+        "android_client_info": {
+          "package_name": "com.example.coroutineswithfirestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1yA56uI-gS-IUxRvC523BtJ07lFcBZDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

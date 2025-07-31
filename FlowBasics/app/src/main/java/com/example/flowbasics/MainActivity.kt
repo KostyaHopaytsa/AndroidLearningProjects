@@ -13,12 +13,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flowbasics.ui.theme.FlowBasicsTheme
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 
 class MainActivity : ComponentActivity() {
@@ -46,11 +50,20 @@ class MainActivity : ComponentActivity() {
 //                    }
 //                }
 
-//                LaunchedEffect(key1 = true) {
-//                    viewModel.sharedFlow.collect { number ->
-//
-//                    }
-//                }
+                var latestNumber by remember { mutableStateOf<Int?>(null) }
+                LaunchedEffect(key1 = true) {
+                    viewModel.sharedFlow.collect { number ->
+                        latestNumber = number
+                    }
+                }
+
+                Box (modifier = Modifier.fillMaxSize()){
+                    Text(
+                        text = "Latest squared number: ${latestNumber}",
+                        fontSize = 30.sp,
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
             }
         }
     }

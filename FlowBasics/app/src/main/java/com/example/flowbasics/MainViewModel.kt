@@ -44,7 +44,10 @@ class MainViewModel: ViewModel() {
 
     init {
 //        collectFlow()
+
         squareNumber(3)
+        squareNumber(2)
+        squareNumber(1)
         viewModelScope.launch {
             _sharedFlow.collect {
                 delay(2000L)

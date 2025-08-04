@@ -78,17 +78,17 @@ class ContactViewModel(
             is ContactEvent.SortContacts -> {
                 _sortType.value = event.sortType
             }
-            is ContactEvent.setFirstName -> {
+            is ContactEvent.SetFirstName -> {
                 _state.update { it.copy(
                     firstName = event.firstName
                 )}
             }
-            is ContactEvent.setLastName -> {
+            is ContactEvent.SetLastName -> {
                 _state.update { it.copy(
                     lastName = event.lastName
                 )}
             }
-            is ContactEvent.setPhoneNumber -> {
+            is ContactEvent.SetPhoneNumber -> {
                 _state.update { it.copy(
                     phoneNumber = event.phoneNumber
                 )}

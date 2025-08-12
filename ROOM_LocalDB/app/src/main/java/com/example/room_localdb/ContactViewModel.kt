@@ -13,9 +13,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class ContactViewModel(
-    private val dao: ContactDao
-): ViewModel() {
+class ContactViewModel(private val dao: ContactDao): ViewModel() {
     private val _sortType = MutableStateFlow(SortType.FIRST_NAME)
     private val _contacts = _sortType
         .flatMapLatest { sortType ->

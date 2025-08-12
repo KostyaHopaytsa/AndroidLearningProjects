@@ -7,15 +7,18 @@ import com.example.todolist.Database.TodoDao
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class TodoListViewModel(private val dao: TodoDao): ViewModel() {
-    val todos = dao.getAllTodos()
+    private val _todos = dao.getAllTodos()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     private val _state = MutableStateFlow(TodoState())
-    val state: StateFlow<TodoState> = _state
+    val state = combine(_state, _todos) { state, todos ->
+        state.copy(todos = todos)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodoState())
 
     fun onEven(event: TodoEvent) {
         when(event) {
@@ -49,9 +52,10 @@ class TodoListViewModel(private val dao: TodoDao): ViewModel() {
                 ) }
             }
             is TodoEvent.SetChecked -> {
-                _state.update { it.copy(
-                    checked = event.checked
-                )}
+                viewModelScope.launch {
+                    val updatedTodo = event.todo.copy(checked = event.checked)
+                    dao.upsertTodo(updatedTodo)
+                }
             }
             is TodoEvent.SetDeadline -> {
                 _state.update { it.copy(

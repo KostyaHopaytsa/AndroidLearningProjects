@@ -1,4 +1,4 @@
-package com.example.firebasefcm.ui.theme
+package com.example.fcm.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -3,23 +3,23 @@ package com.example.dependencyinjection
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.dependencyinjection.ui.theme.DependencyInjectionTheme
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.dependencyinjection.hilt.HiltViewModel
+import com.example.dependencyinjection.koin.KoinViewModel
+import com.example.dependencyinjection.manual.ManualApplication
+import com.example.dependencyinjection.manual.ManualViewModel
+import org.koin.androidx.compose.koinViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DependencyInjectionTheme {
-
-            }
+            val hiltViewModel = hiltViewModel<HiltViewModel>()
+            val koinViewModel = koinViewModel<KoinViewModel>()
+            val manualViewModel = viewModel<ManualViewModel>(
+                factory = ManualApplication.appModule.myViewModelFactory
+            )
         }
     }
 }

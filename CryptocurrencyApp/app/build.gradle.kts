@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -28,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -56,4 +58,29 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Compose dependencies
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.2")
+    implementation ("androidx.navigation:navigation-compose:2.8.0")
+    implementation ("com.google.accompanist:accompanist-flowlayout:0.36.0")
+
+    // Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+
+    // Coroutine Lifecycle Scopes
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.9.2")
+
+    // Dagger - Hilt
+    implementation ("com.google.dagger:hilt-android:2.52")
+    kapt ("com.google.dagger:hilt-android-compiler:2.52")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+    kapt ("androidx.hilt:hilt-compiler:1.2.0")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

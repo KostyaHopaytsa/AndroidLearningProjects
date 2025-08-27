@@ -2,41 +2,39 @@ package com.example.cryptocurrencyapp.data.remote.dto
 
 
 import com.example.cryptocurrencyapp.domain.model.CoinDetail
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
 data class CoinDetailDto(
     val description: String,
-    @SerialName("development_status")
+    @SerializedName("development_status")
     val developmentStatus: String,
-    @SerialName("first_data_at")
+    @SerializedName("first_data_at")
     val firstDataAt: String,
-    @SerialName("hardware_wallet")
+    @SerializedName("hardware_wallet")
     val hardwareWallet: Boolean,
-    @SerialName("hash_algorithm")
+    @SerializedName("hash_algorithm")
     val hashAlgorithm: String,
     val id: String,
-    @SerialName("is_active")
+    @SerializedName("is_active")
     val isActive: Boolean,
-    @SerialName("is_new")
+    @SerializedName("is_new")
     val isNew: Boolean,
-    @SerialName("last_data_at")
+    @SerializedName("last_data_at")
     val lastDataAt: String,
     val links: Links,
-    @SerialName("links_extended")
+    @SerializedName("links_extended")
     val linksExtended: List<LinksExtended>,
     val logo: String,
     val message: String,
     val name: String,
-    @SerialName("open_source")
+    @SerializedName("open_source")
     val openSource: Boolean,
-    @SerialName("org_structure")
+    @SerializedName("org_structure")
     val orgStructure: String,
-    @SerialName("proof_type")
+    @SerializedName("proof_type")
     val proofType: String,
     val rank: Int,
-    @SerialName("started_at")
+    @SerializedName("started_at")
     val startedAt: String,
     val symbol: String,
     val tags: List<Tag>,

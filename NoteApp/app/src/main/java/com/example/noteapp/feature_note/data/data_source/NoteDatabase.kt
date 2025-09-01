@@ -10,5 +10,9 @@ import com.example.noteapp.feature_note.domain.model.Note
 )
 abstract class NoteDatabase: RoomDatabase() {
 
-    abstract val noteDa0: NoteDao
+    abstract val noteDao: NoteDao
+
+    companion object {
+        const val DATABASE_NAME = "notes_db"
+    }
 }

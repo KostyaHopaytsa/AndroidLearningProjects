@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NotesViewModel @Inject constructor(
-private val notesUseCases: NoteUseCases
+private val noteUseCases: NoteUseCases
 ) : ViewModel(){
 
     private val _state = mutableStateOf(NotesState())
@@ -43,14 +43,14 @@ private val notesUseCases: NoteUseCases
 
             is NotesEvent.DeleteNote -> {
                 viewModelScope.launch {
-                    notesUseCases.deleteNoteUseCase(event.note)
+                    noteUseCases.deleteNoteUseCase(event.note)
                     recentlyDeletedNote = event.note
                 }
             }
 
             is NotesEvent.RestoreNote -> {
                 viewModelScope.launch {
-                    notesUseCases.addNoteUseCase(recentlyDeletedNote ?: return@launch)
+                    noteUseCases.addNoteUseCase(recentlyDeletedNote ?: return@launch)
                     recentlyDeletedNote = null
                 }
             }
@@ -65,7 +65,7 @@ private val notesUseCases: NoteUseCases
 
     private fun getNotes(noteOrder: NoteOrder) {
         getNotesJob?.cancel()
-        getNotesJob = notesUseCases.getNotesUseCase(noteOrder)
+        getNotesJob = noteUseCases.getNotesUseCase(noteOrder)
             .onEach { notes ->
                 _state.value = state.value.copy(
                     notes = notes,

@@ -67,6 +67,7 @@ fun NotesScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(contentPadding)
+                .padding(16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
